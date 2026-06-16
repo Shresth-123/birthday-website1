@@ -1,0 +1,592 @@
+/* =========================
+GLOBAL STYLES
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(
+135deg,
+#FFF7F9,
+#FFF0F5,
+#FFE8F0
+);
+color:#555;
+overflow-x:hidden;
+}
+
+/* =========================
+FLOATING HEARTS
+========================= */
+
+.floating-hearts{
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:-1;
+}
+
+.floating-hearts::before{
+content:"💖 💕 🌸 💖 🎀 💕 🌷";
+position:absolute;
+width:100%;
+font-size:2rem;
+opacity:0.25;
+animation:floatHearts 18s linear infinite;
+}
+
+@keyframes floatHearts{
+from{
+transform:translateY(-150px);
+}
+
+
+to{
+    transform:translateY(120vh);
+}
+
+
+}
+
+
+/* =========================
+HEADINGS
+========================= */
+
+h1,h2,h3{
+font-family:'Cormorant Garamond',serif;
+}
+section{
+padding:90px 10%;
+}
+
+/* =========================
+HERO SECTION
+========================= */
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:600px;
+font-size:1.2rem;
+margin-bottom:30px;
+}
+
+.main-btn{
+background:#FF8FAB;
+color:white;
+border:none;
+padding:16px 35px;
+border-radius:50px;
+font-size:1rem;
+cursor:pointer;
+transition:0.3s;
+}
+
+.main-btn:hover{
+transform:translateY(-3px) scale(1.05);
+}
+
+/* =========================
+STORY SECTION
+========================= */
+
+.story{
+text-align:center;
+}
+
+.timeline{
+margin-top:40px;
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.story-card{
+background:rgba(255,255,255,.55);
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.story-card h3{
+margin-bottom:15px;
+}
+
+/* =========================
+RASMALAI SECTION
+========================= */
+
+.rasmalai{
+text-align:center;
+}
+
+.rasmalai p{
+margin-top:15px;
+}
+
+#cookBtn{
+margin-top:25px;
+background:#FF8FAB;
+color:white;
+border:none;
+padding:15px 28px;
+border-radius:50px;
+cursor:pointer;
+font-size:1rem;
+}
+
+.progress-container{
+width:320px;
+max-width:90%;
+height:22px;
+background:white;
+margin:25px auto;
+border-radius:50px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+#progressFill{
+width:0%;
+height:100%;
+background:#FF8FAB;
+transition:0.4s;
+}
+
+#rasmalaiStatus{
+font-weight:600;
+color:#FF6FA0;
+}
+
+/* =========================
+LETTERS
+========================= */
+
+.letters{
+text-align:center;
+}
+
+.letter-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.letter-card{
+background:white;
+padding:25px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+backdrop-filter:
+blur(20px);
+}
+
+.letter-card:hover{
+transform:translateY(-6px);
+}
+
+.letter-card h3{
+margin-bottom:15px;
+}
+
+/* =========================
+GIFT SECTION
+========================= */
+
+.gift-section{
+text-align:center;
+}
+
+.gift-box{
+    width:180px;
+    height:180px;
+    margin:30px auto;
+    background:#FFB6C1;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:5rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gift-box:hover{
+transform:scale(1.08);
+}
+
+#giftMessage{
+display:none;
+margin-top:30px;
+background:white;
+padding:25px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* =========================
+QUESTION SECTION
+========================= */
+
+.question-section{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.question-box{
+width:700px;
+max-width:95%;
+background:white;
+padding:40px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 15px 50px rgba(255,170,200,.15);;
+}
+
+.question-text{
+margin-top:15px;
+font-size:1.2rem;
+}
+
+.button-container{
+margin-top:35px;
+position:relative;
+height:160px;
+}
+
+#yesBtn,
+#noBtn{
+border:none;
+color:white;
+padding:15px 28px;
+border-radius:50px;
+cursor:pointer;
+font-size:1rem;
+}
+
+#yesBtn{
+background:#FF6B9A;
+position:absolute;
+left:25%;
+}
+
+#noBtn{
+background:#FF9FBF;
+position:absolute;
+right:25%;
+}
+
+#pleadMessage{
+margin-top:20px;
+color:#FF6B9A;
+font-weight:600;
+}
+
+/* =========================
+FINAL MESSAGE
+========================= */
+
+.final-message{
+text-align:center;
+}
+
+.final-message p{
+margin-top:20px;
+line-height:1.8;
+}
+
+.final-message h3{
+margin-top:30px;
+font-size:2rem;
+}
+
+/* =========================
+CELEBRATION SCREEN
+========================= */
+
+#celebrationScreen{
+display:none;
+position:fixed;
+inset:0;
+z-index:9999;
+
+
+background:linear-gradient(
+    135deg,
+    #FFD6E7,
+    #FFF0F5,
+    #FFE8F0
+);
+
+justify-content:center;
+align-items:center;
+text-align:center;
+
+
+}
+
+.celebration-content{
+animation:popUp 0.8s ease;
+}
+
+.celebration-content h1{
+font-size:4rem;
+}
+
+.celebration-content h2{
+font-size:3rem;
+margin:20px 0;
+}
+
+.celebration-icons{
+font-size:2rem;
+margin-top:30px;
+}
+
+@keyframes popUp{
+from{
+transform:scale(0.5);
+opacity:0;
+}
+
+
+to{
+    transform:scale(1);
+    opacity:1;
+}
+
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+
+.hero h1{
+    font-size:2.8rem;
+}
+
+.question-box{
+    padding:25px;
+}
+
+#yesBtn{
+    left:10%;
+}
+
+#noBtn{
+    right:10%;
+}
+
+.celebration-content h1{
+    font-size:2.5rem;
+}
+
+.rasmalai-card{
+    background:white;
+    max-width:600px;
+    margin:auto;
+    padding:40px;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+#rasmalaiEmoji{
+    font-size:6rem;
+    margin-bottom:20px;
+    transition:.5s;
+}
+
+#rasmalaiTitle{
+    margin-bottom:15px;
+}
+
+#rasmalaiText{
+    margin-bottom:25px;
+}
+
+#nextStepBtn{
+    background:#ff8fab;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+.rasmalai-animation{
+    animation:pop .6s ease;
+}
+
+@keyframes pop{
+
+    0%{
+        transform:scale(.5);
+        opacity:0;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.gift-photo{
+    width:250px;
+    max-width:90%;
+    border-radius:20px;
+    margin:20px auto;
+    display:block;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+}
+
+.gift-photo:hover{
+    transform:scale(1.05);
+}
+.gift-photo{
+    width:300px;
+    max-width:90%;
+    border-radius:25px;
+    display:block;
+    margin:20px auto;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+
+    transition:.4s;
+}
+
+.gift-photo:hover{
+    transform:scale(1.05);
+}
+#giftMessage{
+    display:none;
+    animation:giftReveal .8s ease;
+}
+
+@keyframes giftReveal{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.gift-photo{
+    width:300px !important;
+    height:auto;
+    display:block;
+    margin:20px auto;
+    border-radius:20px;
+    border:5px solid #ffb6c1;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 30%, rgba(255,192,203,.25), transparent 20%),
+    radial-gradient(circle at 80% 20%, rgba(255,182,193,.2), transparent 25%),
+    radial-gradient(circle at 10% 80%, rgba(255,228,225,.3), transparent 20%),
+    radial-gradient(circle at 90% 70%, rgba(255,192,203,.2), transparent 20%);
+
+    z-index:-2;
+}
+
+.sparkle{
+    position:fixed;
+
+    width:4px;
+    height:4px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+    0 0 10px white,
+    0 0 20px pink;
+
+    animation:twinkle 4s infinite;
+
+    pointer-events:none;
+}
+
+@keyframes twinkle{
+
+0%,100%{
+opacity:.2;
+transform:scale(.5);
+}
+
+50%{
+opacity:1;
+transform:scale(1.5);
+}
+
+}
+#musicBtn{
+    width:350px !important;
+    height:80px !important;
+
+    font-size:28px !important;
+    font-weight:bold !important;
+
+    background:#ff8fab !important;
+    color:white !important;
+
+    border:none !important;
+    border-radius:50px !important;
+
+    display:block !important;
+    margin:20px auto !important;
+
+    cursor:pointer !important;
+
+    box-shadow:0 10px 30px rgba(255,143,171,.4) !important;
+}
+
+}
